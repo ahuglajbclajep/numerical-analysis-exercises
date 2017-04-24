@@ -8,7 +8,7 @@ double getCenter(double min, double max) {
     return (min+max)/2;
 }
 
-double bisectionMethod (double accuracy) {
+double bisectionMethod(double accuracy) {
     double min = -1, max = 2;
 
     double x;
