@@ -3,19 +3,19 @@
 
 #include "funcdef.h"
 
-double getX(double seed) {
-    return seed - f(seed)/df(seed);
+double getXWhenYIsZero(double initialVal) {
+    return initialVal - f(initialVal)/df(initialVal);
 }
 
 double newtonRaphsonMethod(double accuracy) {
+    const int times = 30;
     double x = 2;
 
-    int i;
-    for (i=0; i<30; i++) {
-        x = getX(x);
+    for (int i=0; i<times; i++) {
+        x = getXWhenYIsZero(x);
+        if (f(x) <= accuracy) break;
     }
 
     return x;
 }
-
 #endif
