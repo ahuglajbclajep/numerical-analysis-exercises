@@ -1,38 +1,30 @@
 #include <math.h>
-#include <stdlib.h>
 #include <stdio.h>
 
 double originInput(double x) {
     return x*x-2;
 }
 
-double input(double x) {
-    return 2*x;
-}
-
-double getCenter(double x1, double x2) {
-    return (x1 + x2) / 2;
+double getCenter(double min, double max) {
+    return (min+max)/2;
 }
 
 int main() {
-    double max = 2;
-    double min = -1;
-    double tmp = 0.2;
+    double min = -1, max = 2;
+    double accuracy = 0.02;
 
-    printf("%f", getCenter(max, min));
-
-    double y;
+    double center;
     while (1) {
-        y = originInput(getCenter(max, min));
-        printf("%f", y);
-        if (fabs(y) < tmp) break;
+        center = getCenter(min, max);
+        double y = originInput(center);
+        if (fabs(y) < accuracy) break;
         if (signbit(y)) {
-            min = y;
+            min = center;
         } else {
-            max = y;
+            max = center;
         }
     }
 
-    printf("%f", y);
-    return EXIT_SUCCESS;
+    printf("x = %f", center);
+    return 0;
 }
