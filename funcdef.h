@@ -9,4 +9,4 @@ double df(double x) {
     return 2*x;
 }
 
-#endif ROOTFINDING_FUNCDEF_H
+#endif
