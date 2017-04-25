@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include "bisection.h"
-#include "newton_raphson.h"
+#include "newton-raphson.h"
 
 int main() {
     const double accuracy = 0.01;
 
     int input;
-    printf("Please enter a number from 1 to 3.\n");
+    printf("Please enter a number from 1 to 3\n");
     scanf("%d", &input);
 
     double answer;
@@ -19,7 +19,7 @@ int main() {
             break;
         case 2:
             printf("use Newton-Raphson method\n");
-            answer = newtonRaphsonMethod(accuracy);
+            answer = newton_raphson_method(accuracy);
             change = 1;
             break;
     }
@@ -27,7 +27,7 @@ int main() {
     if (change) {
         printf("x = %.8lf\n", answer);
     } else {
-        printf("Incorrect input!!\n");
+        printf("Incorrect input\n");
     }
 
     return 0;

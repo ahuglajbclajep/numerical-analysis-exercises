@@ -4,7 +4,7 @@
 #include <math.h>
 #include "funcdef.h"
 
-double getCenterInRange(double min, double max) {
+double get_center_in_range(double min, double max) {
     return (min+max)/2;
 }
 
@@ -13,10 +13,10 @@ double bisectionMethod(double accuracy) {
 
     double x;
     while (1) {
-        x = getCenterInRange(min, max);
+        x = get_center_in_range(min, max);
         double y = f(x);
 
-        if (fabs(y) < accuracy) break;
+        if (fabs(y) <= accuracy) break;
         if (signbit(y)) {
             min = x;
         } else {
