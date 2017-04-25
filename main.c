@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "bisection.h"
+#include "secant.h"
 #include "newton-raphson.h"
 
 int main() {
@@ -17,7 +18,14 @@ int main() {
             answer = bisectionMethod(accuracy);
             change = 1;
             break;
+
         case 2:
+            printf("use Secant method\n");
+            answer = secant_method(accuracy);
+            change = 1;
+            break;
+
+        case 3:
             printf("use Newton-Raphson method\n");
             answer = newton_raphson_method(accuracy);
             change = 1;
