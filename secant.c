@@ -2,16 +2,16 @@
 #include "const.h"
 
 static double get_x_when_y_is_zero(double min, double max) {
-    return min - f(min)*(max-min)/(f(max)-f(min));
+    return min - g(min)*(max-min)/(g(max)-g(min));
 }
 
 double secant() {
-    double min = -1, max = 2;
+    double min = MIN, max = MAX;
 
     double x;
     for (int i=0; i<TRIALS; i++) {
         x = get_x_when_y_is_zero(min, max);
-        double y = f(x);
+        double y = g(x);
 
         if (fabs(y) <= ACCURACY) break;
         if (signbit(y)) {

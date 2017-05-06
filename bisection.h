@@ -9,12 +9,12 @@ double get_center_in_range(double min, double max) {
 }
 
 double bisection() {
-    double min = -1, max = 2;
+    double min = MIN, max = MAX;
 
     double x;
     while (1) {
         x = get_center_in_range(min, max);
-        double y = f(x);
+        double y = g(x);
 
         if (fabs(y) <= ACCURACY) break;
         if (signbit(y)) {
