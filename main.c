@@ -6,37 +6,11 @@
 int main() {
     const double accuracy = 0.00001;
 
-    int input;
-    printf("Please enter a number from 1 to 3\n");
-    scanf("%d", &input);
+    printf("4x-xe^(2x)+2 = 0\n");
+    printf("solve with Newton-Raphson method.\n");
 
-    double answer;
-    int change = 0;
-    switch (input) {
-        case 1:
-            printf("use Bisection method\n");
-            answer = bisectionMethod(accuracy);
-            change = 1;
-            break;
-
-        case 2:
-            printf("use Secant method\n");
-            answer = secant_method(accuracy);
-            change = 1;
-            break;
-
-        case 3:
-            printf("use Newton-Raphson method\n");
-            answer = newton_raphson_method(accuracy);
-            change = 1;
-            break;
-    }
-
-    if (change) {
-        printf("x = %.8lf\n", answer);
-    } else {
-        printf("Incorrect input\n");
-    }
+    double answer = newton_raphson_method(accuracy);
+    printf("x = %.8lf\n", answer);
 
     return 0;
 }
