@@ -4,7 +4,7 @@
 #include "newton-raphson.h"
 
 int main() {
-    const double accuracy = 0.01;
+    const double accuracy = 0.00001;
 
     int input;
     printf("Please enter a number from 1 to 3\n");
