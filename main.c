@@ -4,8 +4,6 @@
 #include "newton-raphson.h"
 
 int main() {
-    const double accuracy = 0.00001;
-
     printf("4x-xe^(2x)+2 = 0\n");
     printf("solve with Newton-Raphson method.\n");
 

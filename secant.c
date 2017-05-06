@@ -5,7 +5,7 @@ static double get_x_when_y_is_zero(double min, double max) {
     return min - f(min)*(max-min)/(f(max)-f(min));
 }
 
-double secant_method(double accuracy) {
+double secant() {
     double min = -1, max = 2;
 
     double x;
@@ -13,7 +13,7 @@ double secant_method(double accuracy) {
         x = get_x_when_y_is_zero(min, max);
         double y = f(x);
 
-        if (fabs(y) <= accuracy) break;
+        if (fabs(y) <= ACCURACY) break;
         if (signbit(y)) {
             min = x;
         } else {

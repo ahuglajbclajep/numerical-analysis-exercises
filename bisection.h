@@ -2,12 +2,13 @@
 #define ROOTFINDING_BISECTION_H
 
 #include "funcdef.h"
+#include "const.h"
 
 double get_center_in_range(double min, double max) {
     return (min+max)/2;
 }
 
-double bisectionMethod(double accuracy) {
+double bisection() {
     double min = -1, max = 2;
 
     double x;
@@ -15,7 +16,7 @@ double bisectionMethod(double accuracy) {
         x = get_center_in_range(min, max);
         double y = f(x);
 
-        if (fabs(y) <= accuracy) break;
+        if (fabs(y) <= ACCURACY) break;
         if (signbit(y)) {
             min = x;
         } else {
