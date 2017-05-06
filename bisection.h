@@ -1,7 +1,6 @@
 #ifndef ROOTFINDING_BISECTION_H
 #define ROOTFINDING_BISECTION_H
 
-#include <math.h>
 #include "funcdef.h"
 
 double get_center_in_range(double min, double max) {

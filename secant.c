@@ -1,4 +1,3 @@
-#include <math.h>
 #include "funcdef.h"
 
 static double get_x_when_y_is_zero(double min, double max) {
