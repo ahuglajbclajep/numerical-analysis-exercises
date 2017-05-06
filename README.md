@@ -14,7 +14,7 @@ cd RootFinding
 This project uses CMake, but since link error occurs, **please use build.sh**.
 ```sh
 sh build.sh
-./a.out
+./RootFinding
 ```
 
 ### Check
