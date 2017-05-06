@@ -6,7 +6,7 @@ static double get_x_when_y_is_zero(double min, double max) {
 }
 
 double secant() {
-    double min = MIN, max = MAX;
+    double min = G_RANGE_MIN, max = G_RANGE_MAX;
 
     double x;
     for (int i=0; i<TRIALS; i++) {

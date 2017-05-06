@@ -2,8 +2,9 @@
 #define ROOTFINDING_CONST_H
 
 #define ACCURACY (0.00001)
-#define MAX (2)
-#define MIN (-1)
+#define G_RANGE_MAX (2)
+#define G_RANGE_MIN (-1)
+#define NEWTON_RAPHSON_INITIAL_VALUE (1)
 #define TRIALS (30)
 
 #endif

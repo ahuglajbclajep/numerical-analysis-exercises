@@ -14,6 +14,7 @@ int main() {
 
     printf("x = %.8lf\n", bisection());
     printf("x = %.8lf\n", secant());
+    printf("x = %.8lf\n", g_newton_raphson());
 
     return 0;
 }

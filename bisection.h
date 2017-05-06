@@ -9,7 +9,7 @@ double get_center_in_range(double min, double max) {
 }
 
 double bisection() {
-    double min = MIN, max = MAX;
+    double min = G_RANGE_MIN, max = G_RANGE_MAX;
 
     double x;
     while (1) {

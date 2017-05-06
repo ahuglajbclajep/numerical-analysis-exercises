@@ -2,5 +2,6 @@
 #define ROOTFINDING_NEWTON_RAPHSON_H
 
 double f_newton_raphson();
+double g_newton_raphson();
 
 #endif
