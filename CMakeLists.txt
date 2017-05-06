@@ -3,5 +3,5 @@ project(RootFinding)
 
 set(CMAKE_C_STANDARD 11)
 
-set(SOURCE_FILES main.c funcdef.h bisection.h secant.h secant.c newton-raphson.h newton-raphson.c)
+set(SOURCE_FILES main.c funcdef.h bisection.h secant.h secant.c newton-raphson.h newton-raphson.c const.h)
 add_executable(RootFinding ${SOURCE_FILES})
