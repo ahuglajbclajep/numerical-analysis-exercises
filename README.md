@@ -11,15 +11,13 @@ cd RootFinding
 ```
 
 ### Build & Run
-This project uses CMake, but since link error occurs, **please use build.sh**.
 ```sh
-sh build.sh
-./RootFinding
+make
 ```
 
 ### Check
 Use [WolframAlpha](https://www.wolframalpha.com).  
-* [4x-xe^(2x)+2 = 0](http://www.wolframalpha.com/input/?i=4x-xexp(2x)%2B2%3D0)
+* [4x-xe^(2x)+2 = 0](https://www.wolframalpha.com/input/?i=4x-xexp(2x)%2B2%3D0)
 * [x-cos(x) = 0](https://www.wolframalpha.com/input/?i=x-cos(x)%3D0)
 
 ## License
