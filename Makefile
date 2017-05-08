@@ -17,7 +17,7 @@ build: $(src)
 	$(CC) $(CFLAGS) $(src) $(LDFLAGS) $(LIBS) -o $(BUILD_DIR)/$(bin)
 
 run: build
-	@./$(bin)
+	@./$(BUILD_DIR)/$(bin)
 
 clean:
 	rm -r $(BUILD_DIR)
