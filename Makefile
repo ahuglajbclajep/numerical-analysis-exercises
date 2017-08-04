@@ -15,7 +15,8 @@ src = funcdef.h \
 	secant.h \
 	secant.c \
 	newton-raphson.h \
-	newton-raphson.c
+	newton-raphson.c \
+	type.h
 
 all: run
 
