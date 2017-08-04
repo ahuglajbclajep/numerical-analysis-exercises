@@ -1,6 +1,9 @@
+## IDEA ##
 .idea
 
+## CMake ##
 CMakeLists.txt
 cmake-build-debug/
 
+## Makefile ##
 build
