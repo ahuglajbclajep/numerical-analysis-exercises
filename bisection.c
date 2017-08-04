@@ -1,5 +1,4 @@
 #include <math.h>
-#include <stdbool.h>
 #include "type.h"
 #include "const.h"
 
@@ -11,7 +10,7 @@ double bisection(question q) {
     double min = q.min, max = q.max;
 
     double x;
-    while (true) {
+    for (int i=0; i<TRIALS; i++) {
         x = midpoint(min, max);
         double y = q.f(x);
 
