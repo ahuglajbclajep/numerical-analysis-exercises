@@ -8,7 +8,14 @@ BUILD_DIR = build
 bin = Root_Finding
 entry_point = main.c
 test_entry_point = test.c
-src = secant.c newton-raphson.c
+src = funcdef.h \
+	const.h \
+	bisection.h \
+	bisection.c \
+	secant.h \
+	secant.c \
+	newton-raphson.h \
+	newton-raphson.c
 
 all: run
 
