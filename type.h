@@ -8,7 +8,7 @@ typedef struct {
     func df;
     int min;
     int max;
-    int init;
+    int initval;
 } question;
 
 #endif

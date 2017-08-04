@@ -6,7 +6,7 @@ static double new_x(question q, double x) {
 }
 
 double newton_raphson(question q) {
-    double x = q.init;
+    double x = q.initval;
     for (int i=0; i<TRIALS; i++) {
         x = new_x(q,x);
         if (q.f(x) <= ACCURACY) break;
