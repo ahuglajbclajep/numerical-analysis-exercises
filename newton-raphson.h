@@ -1,7 +1,8 @@
 #ifndef ROOTFINDING_NEWTON_RAPHSON_H
 #define ROOTFINDING_NEWTON_RAPHSON_H
 
-double f_newton_raphson();
-double g_newton_raphson();
+#include "type.h"
+
+double newton_raphson(question question);
 
 #endif
