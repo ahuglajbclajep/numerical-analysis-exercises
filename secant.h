@@ -1,6 +1,8 @@
 #ifndef ROOTFINDING_SECANT_H
 #define ROOTFINDING_SECANT_H
 
-double secant();
+#include "type.h"
+
+double secant(question question);
 
 #endif

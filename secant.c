@@ -1,17 +1,18 @@
-#include "funcdef.h"
+#include <math.h>
+#include "type.h"
 #include "const.h"
 
-static double get_x_when_y_is_zero(double min, double max) {
-    return min - g(min)*(max-min)/(g(max)-g(min));
+static double new_x(func f, double a, double b) {
+    return a - f(a)*(b-a)/(f(b) - f(a));
 }
 
-double secant() {
-    double min = G_RANGE_MIN, max = G_RANGE_MAX;
+double secant(question q) {
+    double min = q.min, max = q.max;
 
     double x;
     for (int i=0; i<TRIALS; i++) {
-        x = get_x_when_y_is_zero(min, max);
-        double y = g(x);
+        x = new_x(q.f, min, max);
+        double y = q.f(x);
 
         if (fabs(y) <= ACCURACY) break;
         if (signbit(y)) {
