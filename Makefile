@@ -1,27 +1,29 @@
 CC = gcc
-CFLAGS =
-LDFLAGS =
-LIBS = -lm
+CFLAGS = -std=c99 -O2
+LDFLAGS = -lm
+LIBS =
 
 BUILD_DIR = build
 
-src = main.c secant.c newton-raphson.c
-bin = RootFinding
-zip = $(bin)_src
+bin = Root_Finding
+entry_point = main.c
+test_entry_point = test.c
+src = secant.c newton-raphson.c
 
 all: run
 
 .PHONY: build
-build: $(src)
+build:
 	@mkdir -p $(BUILD_DIR)
-	$(CC) $(CFLAGS) $(src) $(LDFLAGS) $(LIBS) -o $(BUILD_DIR)/$(bin)
-
-run: build
-	@./$(BUILD_DIR)/$(bin)
+	$(CC) $(CFLAGS) $(entry_point) $(src) $(LDFLAGS) $(LIBS) -o $(BUILD_DIR)/$(bin)
 
 clean:
-	rm -r $(BUILD_DIR)
+	rm -rf $(BUILD_DIR)
 
-zip: $(mkdir)
+run: build
+	@cd $(BUILD_DIR) && ./$(bin)
+
+test:
 	@mkdir -p $(BUILD_DIR)
-	git archive -o $(BUILD_DIR)/$(zip).zip HEAD
+	$(CC) $(CFLAGS) $(test_entry_point) $(src) $(LDFLAGS) $(LIBS) -o $(BUILD_DIR)/$(bin)_test
+	@cd $(BUILD_DIR) && ./$(bin)_test
