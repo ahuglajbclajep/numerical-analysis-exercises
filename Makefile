@@ -10,11 +10,9 @@ entry_point = main.c
 test_entry_point = test.c
 src = funcdef.h \
 	const.h \
-	bisection.h \
+	solve-methods.h \
 	bisection.c \
-	secant.h \
 	secant.c \
-	newton-raphson.h \
 	newton-raphson.c \
 	type.h
 

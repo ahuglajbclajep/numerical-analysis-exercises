@@ -1,9 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "type.h"
-#include "bisection.h"
-#include "secant.h"
-#include "newton-raphson.h"
+#include "solve-methods.h"
 #include "funcdef.h"
 #include "const.h"
 
@@ -16,7 +14,7 @@ int main() {
     question b = {g, dg, G_RANGE_MIN, G_RANGE_MAX, NEWTON_RAPHSON_INITIAL_VALUE};
     printf("Bisection method: x = %.8lf\n", bisection(b));
     printf("Secant method: x = %.8lf\n", secant(b));
-    printf("Newton-Raphson method: x = %.8lf\n", newton_raphson(a));
+    printf("Newton-Raphson method: x = %.8lf\n", newton_raphson(b));
 
     return EXIT_SUCCESS;
 }
