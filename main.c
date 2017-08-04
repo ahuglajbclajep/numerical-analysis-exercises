@@ -13,7 +13,8 @@ int main() {
     printf("x = %.8lf\n", f_newton_raphson());
 
     puts("'x-cos(x) = 0' solve with Bisection, Secant & Newton-Raphson method.");
-    printf("Bisection method: x = %.8lf\n", bisection());
+    question b = {g, dg, G_RANGE_MIN, G_RANGE_MAX, NEWTON_RAPHSON_INITIAL_VALUE};
+    printf("Bisection method: x = %.8lf\n", bisection(b));
     printf("Secant method: x = %.8lf\n", secant());
     printf("Newton-Raphson method: x = %.8lf\n", g_newton_raphson());
 

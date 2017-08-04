@@ -1,19 +1,19 @@
 #include <math.h>
 #include <stdbool.h>
-#include "funcdef.h"
+#include "type.h"
 #include "const.h"
 
 static inline double midpoint(double a, double b) {
     return (a+b)/2;
 }
 
-double bisection() {
-    double min = G_RANGE_MIN, max = G_RANGE_MAX;
+double bisection(question q) {
+    double min = q.min, max = q.max;
 
     double x;
     while (true) {
         x = midpoint(min, max);
-        double y = g(x);
+        double y = q.f(x);
 
         if (fabs(y) <= ACCURACY) break;
         if (signbit(y)) {

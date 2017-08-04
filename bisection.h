@@ -1,6 +1,8 @@
 #ifndef ROOTFINDING_BISECTION_H
 #define ROOTFINDING_BISECTION_H
 
-double bisection();
+#include "type.h"
+
+double bisection(question question);
 
 #endif
