@@ -3,8 +3,10 @@
 
 #include <math.h>
 
-// When it is an argument of a higher-order function,
-// the inline function is output as a normal static function.
+/*
+ * When it is an argument of a higher-order function,
+ * the inline function is output as a normal static function.
+ */
 
 static inline double f(double x) {
     return 4*x -x*exp(2*x) +2;

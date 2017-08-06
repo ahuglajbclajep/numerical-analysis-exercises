@@ -2,6 +2,12 @@
 #include "const.h"
 
 static double new_x(question q, double x) {
+    /*
+     * From Taylor expansion
+     * 'f(x) = f(x0) + f'(x0)(x - x0) + ...',
+     * so 'x = x0 - f(x0)/f'(x0)'.
+     */
+
     return x - q.f(x)/q.df(x);
 }
 
