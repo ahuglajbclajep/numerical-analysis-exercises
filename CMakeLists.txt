@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(Root-Finding)
+project(Root_Finding)
 
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_C_FLAGS -O2)
