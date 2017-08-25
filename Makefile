@@ -1,35 +1,26 @@
 CC = gcc
 CFLAGS = -std=c99 -O2
 LDFLAGS = -lm
-LIBS =
 
-BUILD_DIR = build
-
-bin = Root_Finding
-entry_point = main.c
-test_entry_point = test.c
-src = funcdef.h \
-	const.h \
-	solve-methods.h \
+bin = Root-Finding
+src = main.c \
 	bisection.c \
 	secant.c \
-	newton-raphson.c \
-	type.h
+	newton-raphson.c
 
-all: run
+.PHONY: run
+.SUFFIXES: .c .o
 
-.PHONY: build
-build:
-	@mkdir -p $(BUILD_DIR)
-	$(CC) $(CFLAGS) $(entry_point) $(src) $(LDFLAGS) $(LIBS) -o $(BUILD_DIR)/$(bin)
+$(bin): $(src:.c=.o)
+	$(CC) -o $@ $^ $(LDFLAGS)
+
+all: clean $(bin)
+
+.c.o:
+	$(CC) $(CFLAGS) -c $<
+
+run:
+	@make && ./$(bin)
 
 clean:
-	rm -rf $(BUILD_DIR)
-
-run: build
-	@cd $(BUILD_DIR) && ./$(bin)
-
-test:
-	@mkdir -p $(BUILD_DIR)
-	$(CC) $(CFLAGS) $(test_entry_point) $(src) $(LDFLAGS) $(LIBS) -o $(BUILD_DIR)/$(bin)_test
-	@cd $(BUILD_DIR) && ./$(bin)_test
+	$(RM) $(src:.c=.o) $(bin)

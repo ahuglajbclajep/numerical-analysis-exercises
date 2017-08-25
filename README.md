@@ -13,7 +13,7 @@ cd RootFinding
 
 ### Build & Run
 ```sh
-make
+make run
 ```
 
 ### Check
