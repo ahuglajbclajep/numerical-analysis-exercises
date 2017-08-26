@@ -7,7 +7,7 @@ APP_NAME = Root-Finding
 SRC_DIR = src
 OBJ_DIR = build
 SRC = $(shell ls $(SRC_DIR)/*.c)
-OBJ = $(subst $(SRC_DIR), $(OBJ_DIR), $(SRC:.c=.o))
+OBJ = $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
 $(OBJ_DIR)/$(APP_NAME): $(OBJ)
 	$(CC) -o $@ $^ $(LDFLAGS)
