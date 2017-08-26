@@ -4,11 +4,7 @@ project(Root_Finding)
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_C_FLAGS -O2)
 
-set(SOURCE_FILES
-  main.c
-  bisection.c
-  secant.c
-  newton-raphson.c)
+file(GLOB SOURCE_FILES src/*.c)
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 target_link_libraries(${PROJECT_NAME} m)

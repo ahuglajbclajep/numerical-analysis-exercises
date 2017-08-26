@@ -2,8 +2,7 @@
 .idea
 
 ## CMake ##
-cmake-build-debug/
+cmake-build-debug
 
 ## Makefile ##
-*.o
-Root-Finding
+build
