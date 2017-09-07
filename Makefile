@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -std=c99 -O2
 LDFLAGS = -lm
-INCLUDE = -I $(SRC_DIR)
+INCLUDE = -I$(SRC_DIR)
 
 APP_NAME = Root-Finding
 SRC_DIR = src
@@ -16,7 +16,7 @@ all: clean $(OBJ_DIR)/$(APP_NAME)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@mkdir -p $(OBJ_DIR)
-	$(CC) $(CFLAGS) $(INCLUDE) -MMD -MP -o $@ -c $<
+	$(CC) -c $(CFLAGS) $(INCLUDE) -MMD -MP -o $@ $<
 
 run:
 	@make
