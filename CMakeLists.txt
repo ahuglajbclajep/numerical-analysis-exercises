@@ -10,5 +10,5 @@ target_link_libraries(${PROJECT_NAME} m)
 
 add_custom_target(run
   COMMAND make
-  COMMAND ${PROJECT_NAME}
+  COMMAND ./${PROJECT_NAME}
 )

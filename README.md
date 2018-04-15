@@ -1,5 +1,5 @@
 # RootFinding
-**This artifact is for learning and is not optimized such as speed.**
+**This program is for learning and is not optimized such as speed.**
 
 `4x-xe^(2x)+2 = 0` solve with Newton-Raphson method.  
 `x-cos(x) = 0` solve with Bisection, Secant & Newton-Raphson method.
