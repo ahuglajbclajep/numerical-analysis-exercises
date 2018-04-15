@@ -1,8 +1,8 @@
-## IDEA ##
+# JetBrains
 .idea
 
-## CMake ##
+# CMake
 cmake-build-debug
 
-## Makefile ##
+# Makefile
 build

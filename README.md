@@ -5,14 +5,14 @@
 `x-cos(x) = 0` solve with Bisection, Secant & Newton-Raphson method.
 
 ## Usage
-### Install
-```sh
-git clone https://github.com/ahuglajbclajep/RootFinding.git
-cd RootFinding
-```
-
 ### Build & Run
 ```sh
+make run
+```
+
+When using CMake:
+```sh
+mkdir -p cmake-build-debug && cd $_ && cmake ..
 make run
 ```
 
