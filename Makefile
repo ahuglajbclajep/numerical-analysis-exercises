@@ -4,7 +4,7 @@ LDFLAGS = -lm
 LIBS =
 INCLUDE = -I$(SRC_DIR)
 
-APP_NAME = Root-Finding
+APP_NAME = $(notdir $(CURDIR))
 SRC_DIR = src
 OBJ_DIR = build
 SRC = $(wildcard $(SRC_DIR)/*.c)
@@ -20,7 +20,7 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 all: clean $(OBJ_DIR)/$(APP_NAME)
 
 run:
-	@make
+	@make -f ../Makefile
 	@cd $(OBJ_DIR) && ./$(APP_NAME)
 
 clean:

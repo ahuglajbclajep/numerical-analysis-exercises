@@ -1,8 +1,1 @@
-# JetBrains
-.idea
-
-# CMake
-cmake-build-debug
-
-# Makefile
 build
