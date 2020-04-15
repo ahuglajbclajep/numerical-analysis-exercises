@@ -1,5 +1,7 @@
 # numerical-analysis-exercises
 
+These programs are for learning purposes only and are not optimized for speed, etc.
+
 ## Usage
 
 ```sh
